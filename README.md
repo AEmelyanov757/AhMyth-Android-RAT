@@ -1,27 +1,35 @@
 # AhMyth Android Rat
-###### Beta Version
-It consists of two parts :
-* Server side : desktop application based on electron framework (control panel)
-* Client side : android application (backdoor)
+###### Версия: Beta-2
+* Серверная часть  : desktop приложение на Electron Framework (панель управления),
+                     сервер-трекеров на базе Traccar (https://github.com/traccar/traccar)
+
+* Клиентская часть : Android приложение, служба (RAT)
 
 
-## Getting Started
-### You have two options to install it
-#### 1) From source code
-###### Prerequisite :
-* Electron (to start the app)
-* Java (to generate apk backdoor)
-* Electron-builder and electron-packer (to build binaries for (OSX,WINDOWS,LINUX))
-1. ```git clone https://github.com/AhMyth/AhMyth-Android-RAT.git```
-2. ```cd AhMyth-Android-RAT/AhMyth-Server```
-3. ```npm start```
+## НАЧАЛО РАБОТЫ
+### Два вида установки
+#### 1) Из исходного кода
+###### Действия в системе Debian 10(desktop):
+sudo apt install -y nodejs npm git curl libgconf-2-4
+sudo apt istall -y wget gnupg software-properties-common
 
-#### 2) From binaries
-###### Prerequisite :
-* Download a binary from https://github.com/AhMyth/AhMyth-Android-RAT/releases
-* Java (to generate apk backdoor)
+wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+sudo apt update -y
+sudo apt install adoptopenjdk-8-hotspot -y
+sudo update-alternatives --config java
 
-## Screenshots
+git clone https://github.com/elcaza/AhMyth-Android-RAT
+cd AhMyth-Android-RAT/AhMyth-Server/
+npm install 
+npm start
+
+#### 2) Из бинарников
+###### Действия :
+* Скачать по адресу https://github.com/AhMyth/AhMyth-Android-RAT/releases
+* Установить Java
+
+## Скриншоты
 <p align="center">
   <img src="http://i.imgur.com/HM3uXL6.png" width="600"/>
 </p>
@@ -39,7 +47,7 @@ It consists of two parts :
 </p>
 
 
-## Video Tutorial
+## Видеоурок
 <p align="center">
 <a href="https://www.youtube.com/watch?v=DDIZTABABzs">
   <img src="https://img.youtube.com/vi/DDIZTABABzs/0.jpg" width="600"/>
@@ -48,5 +56,5 @@ It consists of two parts :
 
 ---------------------------------------------------------------
 ##### I will not be responsible for any direct or indirect damage caused due to the usage of this tool, it is for educational purposes only.
-###### Twitter : <a href="https://twitter.com/AhMythDev"> @AhMythDev </a>
-###### Bitcoin address for donations:  : 1EVwLuwmbsEuej7qJnNquFeQJLsgd2b8Lq
+##### Я не несу ответственности за любой прямой или косвенный ущерб, причиненный в результате использования этого инструмента, он предназначен только для образовательных целей.
+
