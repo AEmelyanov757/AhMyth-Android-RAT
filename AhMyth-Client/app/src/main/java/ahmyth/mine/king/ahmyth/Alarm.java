@@ -28,6 +28,7 @@ public class Alarm extends BroadcastReceiver {
     @Override 
     public void onReceive(Context context, Intent intent) { 
         // Здесь код отправки данных
+        //new RequestTask().execute("http://stackoverflow.com");
     } 
 }
 
